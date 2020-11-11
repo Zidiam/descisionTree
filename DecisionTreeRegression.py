@@ -14,7 +14,7 @@ dataset.describe()
 X = dataset.drop('price_range', axis=1)  #This is the target variable with value of 0(low cost), 1(medium cost), 2(high cost) and 3(very high cost).
 y = dataset['price_range']
 
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=0)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.1, random_state=0)
 
 regressor = DecisionTreeRegressor()
 regressor.fit(X_train, y_train)
